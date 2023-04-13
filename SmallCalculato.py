@@ -14,10 +14,14 @@ def multiply(num1, num2):
 def divide(num1, num2):
     return num1 / num2
 
+#define the function that performs remainder operation
+def remainder(num1, num2):
+    return num1 % num2
+
 # Get input from the user
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
-operation = input("Enter an operation (+, -, *, /): ")
+operation = input("Enter an operation (+, -, *, /, %): ")
 
 # Call the appropriate function based on the user's input
 if operation == "+":
@@ -28,6 +32,8 @@ elif operation == "*":
     result = multiply(num1, num2)
 elif operation == "/":
     result = divide(num1, num2)
+elif operation == '%':
+    result = remainder(num1, num2)
 else:
     print("Invalid operation. Please try again.")
     exit()
